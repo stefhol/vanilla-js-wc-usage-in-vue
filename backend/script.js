@@ -150,7 +150,6 @@ const modules = {
 };
 
 export const init = (shareScope) => {
-    console.log("Scope initialized");
     return Promise.resolve();
 };
 export const get = (module) => {

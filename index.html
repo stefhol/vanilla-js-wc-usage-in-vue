@@ -11,8 +11,9 @@
             list-item-4="Fifth item on the list"
             listItem="This will not appear"
             add-item-text="Add new list item:"
-        >
-        </editable-list>
-        <script type="text/javascript" src="http://localhost:3000/script.js"></script>
+        />
+        <script type="module" src="http://localhost:3000/script.js">
+           await window.remote_wc_app.get("./EditableList");
+        </script>
     </body>
 </html>
