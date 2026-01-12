@@ -125,6 +125,16 @@ export class EditableList extends HTMLElement {
     removeListItem(e) {
         e.target.parentNode.remove();
     }
+    // Add this setter
+    set title(value) {
+        this.setAttribute("title", value);
+    }
+
+    // Since 'items' is derived from all attributes, 
+    // you usually don't 'set' it directly, but Vue might try.
+    set items(value) {
+        // No-op or logic to handle array input
+    }
 }
 
 // let the browser know about the custom element
@@ -149,6 +159,7 @@ export const get = (module) => {
         resolve(() => factory());
     });
 }
+
 
 window.remote_wc_app = {
     get,
